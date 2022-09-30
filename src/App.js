@@ -33,6 +33,7 @@ import { connect, useSelector } from "react-redux";
 
 const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
 const URL = `${PROXY}`;
+console.log(window.location.hostname)
 
 function App({ dispatchGetEmoji }) {
     let [cocktailsInfo, setcocktailsInfo] = useState([]);
