@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/proxy/*"
+  to = "https://mojitomalajo.herokuapp.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+    from = "/"
+    to = "index.html"
+    status = 200
