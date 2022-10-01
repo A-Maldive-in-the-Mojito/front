@@ -8,6 +8,7 @@ import { Form } from "react-bootstrap";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+
 import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 
@@ -361,7 +362,8 @@ function Filter() {
                   <img
                     className={mainStyles.emoji}
                     src={
-                      emoji.filter((item) => item["value"] == val.value)[0].url
+                      // emoji.filter((item) => item["value"] == val.value)[0].url
+                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png"
                     }
                   />
                 </label>
@@ -384,7 +386,8 @@ function Filter() {
                   <img
                     className={mainStyles.emoji}
                     src={
-                      emoji.filter((item) => item["value"] == val.value)[0].url
+                      // emoji.filter((item) => item["value"] == val.value)[0].url
+                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png"
                     }
                   />
                 </label>
