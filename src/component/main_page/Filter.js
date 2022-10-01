@@ -8,6 +8,7 @@ import { Form } from "react-bootstrap";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+0;
 import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 
@@ -44,6 +45,19 @@ function Filter() {
   // const sweetness5 = emoji.filter((item) =>
   //   item["value"].includes("sweetness5")
   // )[0].url;
+
+  const booziness1 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+  const booziness3 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+  const booziness5 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+  const sweetness1 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+  const sweetness3 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+  const sweetness5 =
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
 
   const tastingNoteList = [
     {
