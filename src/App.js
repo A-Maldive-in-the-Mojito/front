@@ -31,8 +31,9 @@ import { connect, useSelector } from "react-redux";
 
 // const URL = 'http://localhost:5000'
 
-const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
-const URL = `${PROXY}`;
+// const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
+// const URL = `${PROXY}`;
+const URL = "https://mojitoto.herokuapp.com"
 console.log(window.location.hostname)
 
 function App({ dispatchGetEmoji }) {
