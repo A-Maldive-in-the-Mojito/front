@@ -24,13 +24,13 @@ function Filter() {
   const reduxState = useSelector((state) => state);
   const emoji = reduxState.emoji;
   
-  const booziness1 = emoji.filter((item) => item["value"].includes("booziness1"))[0].url
-  const booziness3 = emoji.filter((item) => item["value"].includes("booziness3"))[0].url
-  const booziness5 = emoji.filter((item) => item["value"].includes("booziness5"))[0].url
+  const booziness1 = emoji.filter((item) => item["value"].includes("booziness1"))[0].url;
+  const booziness3 = emoji.filter((item) => item["value"].includes("booziness3"))[0].url;
+  const booziness5 = emoji.filter((item) => item["value"].includes("booziness5"))[0].url;
 
-  const sweetness1 = emoji.filter((item) => item["value"].includes("sweetness1"))[0].url
-  const sweetness3 = emoji.filter((item) => item["name"].includes("Wine Glass"))[0].url
-  const sweetness5 = emoji.filter((item) => item["value"].includes("sweetness5"))[0].url
+  const sweetness1 = emoji.filter((item) => item["value"].includes("sweetness1"))[0].url;
+  const sweetness3 = emoji.filter((item) => item["name"].includes("Wine Glass"))[0].url;
+  const sweetness5 = emoji.filter((item) => item["value"].includes("sweetness5"))[0].url;
   
 
   const tastingNoteList = [
