@@ -8,7 +8,6 @@ import { Form } from "react-bootstrap";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-0;
 import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 
