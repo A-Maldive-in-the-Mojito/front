@@ -33,6 +33,8 @@ function Filter() {
   const sweetness5 = emoji.filter((item) => item["value"].includes("sweetness5"))[0].url;
   
 
+  console.log(emoji, booziness1)
+  
   const tastingNoteList = [
     {
       name: "과일",
