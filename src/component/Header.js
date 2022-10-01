@@ -16,7 +16,7 @@ import { store } from '../redux/store.js'
 const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
 const URL = `${PROXY}`;
 
-const mainURL = "http://localhost:3000/"
+const mainURL = "https://maldivesinmojito.netlify.app"
 
 function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispatchRemoveStore }) {
     //리덕스 스토어에 이모지 가져오기
