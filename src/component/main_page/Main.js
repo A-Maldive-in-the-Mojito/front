@@ -7,7 +7,7 @@ function Main(){
     return (
         <div className={mainStyles.mainPage}>
             <Top100 />
-            {/* <Filter /> */}
+            <Filer />
         </div>
     );
 }
