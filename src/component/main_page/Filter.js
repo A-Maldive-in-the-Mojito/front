@@ -15,7 +15,6 @@ import { useContext, useEffect, useState, useRef } from "react";
 import { APIContext } from "../../context/APIContext";
 import { event } from "jquery";
 
-
 function Filter() {
   //  const cocktail_api = useSelector((state) => state)
   const API = useContext(APIContext);
@@ -23,96 +22,142 @@ function Filter() {
   //리덕스 스토어에 이모지 가져오기
   const reduxState = useSelector((state) => state);
   const emoji = reduxState.emoji;
-  
-  const booziness1 = emoji.filter((item) => item["value"].includes("booziness1"))[0].url;
-  const booziness3 = emoji.filter((item) => item["value"].includes("booziness3"))[0].url;
-  const booziness5 = emoji.filter((item) => item["value"].includes("booziness5"))[0].url;
 
-  const sweetness1 = emoji.filter((item) => item["value"].includes("sweetness1"))[0].url;
-  const sweetness3 = emoji.filter((item) => item["name"].includes("Wine Glass"))[0].url;
-  const sweetness5 = emoji.filter((item) => item["value"].includes("sweetness5"))[0].url;
-  
+  console.log(emoji);
 
-  console.log(emoji, booziness1)
-  
+  // const booziness1 = emoji.filter((item) =>
+  //   item["value"].includes("booziness1")
+  // )[0].url;
+  // const booziness3 = emoji.filter((item) =>
+  //   item["value"].includes("booziness3")
+  // )[0].url;
+  // const booziness5 = emoji.filter((item) =>
+  //   item["value"].includes("booziness5")
+  // )[0].url;
+
+  // const sweetness1 = emoji.filter((item) =>
+  //   item["value"].includes("sweetness1")
+  // )[0].url;
+  // const sweetness3 = emoji.filter((item) =>
+  //   item["name"].includes("Wine Glass")
+  // )[0].url;
+  // const sweetness5 = emoji.filter((item) =>
+  //   item["value"].includes("sweetness5")
+  // )[0].url;
+
   const tastingNoteList = [
     {
       name: "과일",
-      value: "프루티"
+      value: "프루티",
     },
     {
       name: "허브",
-      value: "허브"
+      value: "허브",
     },
     {
       name: "아이셔",
-      value: "아이셔"
+      value: "아이셔",
     },
     {
       name: "아이써",
-      value: "아이써"
+      value: "아이써",
     },
     {
       name: "프레시",
-      value: "프레시"
+      value: "프레시",
     },
-  ]
+  ];
 
   const baseList = [
     {
       name: "진",
-      value: "gin"
+      value: "gin",
     },
     {
       name: "럼",
-      value: "rum"
+      value: "rum",
     },
     {
       name: "위스키",
-      value: "whiskey"
+      value: "whiskey",
     },
     {
       name: "데킬라",
-      value: "tequila"
+      value: "tequila",
     },
     {
       name: "보드카",
-      value: "vodka"
+      value: "vodka",
     },
     {
       name: "브랜디",
-      value: "brandy"
+      value: "brandy",
     },
-  ]
-
+  ];
 
   const alcoholMarks = [
     {
       value: 1,
-      label: (<div className={mainStyles.slider_label}><img src={booziness1} /> <p>사람구실은 <p>해야지</p></p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={booziness1} />{" "}
+          <p>
+            사람구실은 <p>해야지</p>
+          </p>
+        </div>
+      ),
     },
     {
       value: 3,
-      label: (<div className={mainStyles.slider_label}><img src={booziness3} /> <p>오스트랄로피테쿠스 <p>입니다</p></p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={booziness3} />{" "}
+          <p>
+            오스트랄로피테쿠스 <p>입니다</p>
+          </p>
+        </div>
+      ),
     },
     {
       value: 5,
-      label: (<div className={mainStyles.slider_label}><img src={booziness5} /> <p>멍멍</p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={booziness5} /> <p>멍멍</p>
+        </div>
+      ),
     },
   ];
 
   const dryMarks = [
     {
       value: 1,
-      label: (<div className={mainStyles.slider_label}><img src={sweetness1} /> <p>달달함에 잠겨 <p>죽고싶다</p></p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={sweetness1} />{" "}
+          <p>
+            달달함에 잠겨 <p>죽고싶다</p>
+          </p>
+        </div>
+      ),
     },
     {
       value: 3,
-      label: (<div className={mainStyles.slider_label}><img src={sweetness3} /> <p>달콤쌉싸름</p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={sweetness3} /> <p>달콤쌉싸름</p>
+        </div>
+      ),
     },
     {
       value: 5,
-      label: (<div className={mainStyles.slider_label}><img src={sweetness5} /> <p>인생보다<p>쓴맛으로</p></p></div>),
+      label: (
+        <div className={mainStyles.slider_label}>
+          <img src={sweetness5} />{" "}
+          <p>
+            인생보다<p>쓴맛으로</p>
+          </p>
+        </div>
+      ),
     },
   ];
 
@@ -120,8 +165,8 @@ function Filter() {
     color: "#ff9924",
     height: 6,
     //고정
-    '&.Mui-disabled': {
-      color: '#fe900f'
+    "&.Mui-disabled": {
+      color: "#fe900f",
     },
 
     // 단추
@@ -168,8 +213,8 @@ function Filter() {
     checked
       ? (tastingValue.current = [eventValue, ...tastingValue.current])
       : (tastingValue.current = tastingValue.current.filter(
-        (val) => val != eventValue
-      ));
+          (val) => val != eventValue
+        ));
   };
 
   // 베이스 값
@@ -180,12 +225,12 @@ function Filter() {
     baseChecked
       ? (baseValue.current = [eventValue, ...baseValue.current])
       : (baseValue.current = baseValue.current.filter(
-        (val) => val != eventValue
-      ));
+          (val) => val != eventValue
+        ));
   };
 
   // 얼마나 취할래 값
-  const [currentBoozy, setCurrentBoozy] = useState();//검색버튼클릭시 지정해둔 값으로 고정하기 위함.
+  const [currentBoozy, setCurrentBoozy] = useState(); //검색버튼클릭시 지정해둔 값으로 고정하기 위함.
   const boozyValue = useRef(10);
   const boozyOnChange = (event) => {
     const parseBoozyValue = parseInt(event.target.value);
@@ -194,12 +239,12 @@ function Filter() {
   };
 
   // sweet or dry 값
-  const [currentSweet, setCurrentSweet] = useState();//검색버튼클릭시 지정해둔 값으로 고정하기 위함.
+  const [currentSweet, setCurrentSweet] = useState(); //검색버튼클릭시 지정해둔 값으로 고정하기 위함.
   const sweetValue = useRef(6);
   const sweetOnchange = (event) => {
     const parseSweetValue = parseInt(event.target.value);
     sweetValue.current = parseSweetValue * 2;
-    setCurrentSweet(parseSweetValue)
+    setCurrentSweet(parseSweetValue);
   };
 
   const [클릭함, set클릭함] = useState(0);
@@ -208,7 +253,7 @@ function Filter() {
 
   const searchOnClick = (event) => {
     set클릭함(1);
-    console.log(event)
+    console.log(event);
     // console.log(tastingValue.current);
     // console.log(baseValue.current);
     // console.log(boozyValue.current);
@@ -260,7 +305,6 @@ function Filter() {
       (val) => val.booziness <= boozyValue.current
     );
     boozyArray.push(searchBoozy);
-    
 
     // sweet or dry
     const sweetArray = [];
@@ -268,14 +312,12 @@ function Filter() {
       (val) => val.sweetness <= sweetValue.current
     );
     sweetArray.push(searchSweet);
-   
 
     // 네 가지 항목 필터링
     const allFilter = concatTA
       .filter((val) => concatBA.includes(val))
       .filter((val) => boozyArray[0].includes(val))
       .filter((val) => sweetArray[0].includes(val));
-    
 
     // 중복제거
     const removeDuplicate = Array.from(new Set(allFilter));
@@ -293,7 +335,6 @@ function Filter() {
           <div className={mainStyles.tastingNote}>
             <h3>테이스팅 노트</h3>
             <div id={mainStyles.checkBoxList}>
-
               {tastingNoteList.map((val) => (
                 <label>
                   <input
@@ -304,17 +345,20 @@ function Filter() {
                   />
                   <i className={mainStyles.circle}></i>
                   <span className={mainStyles.text}>{val.name}</span>
-                  <img className={mainStyles.emoji} src={emoji.filter((item)=> item["value"] == val.value)[0].url} />
-                  </label>
+                  <img
+                    className={mainStyles.emoji}
+                    src={
+                      emoji.filter((item) => item["value"] == val.value)[0].url
+                    }
+                  />
+                </label>
               ))}
-
             </div>
           </div>
           <div className="base">
             <h3>베이스</h3>
             <div id={mainStyles.checkBoxList}>
-              
-            {baseList.map((val) => (
+              {baseList.map((val) => (
                 <label>
                   <input
                     onChange={baseOnChange}
@@ -324,11 +368,14 @@ function Filter() {
                   />
                   <i className={mainStyles.circle}></i>
                   <span className={mainStyles.text}>{val.name}</span>
-                  <img className={mainStyles.emoji} src={emoji.filter((item)=> item["value"] == val.value)[0].url} />
-                  </label>
+                  <img
+                    className={mainStyles.emoji}
+                    src={
+                      emoji.filter((item) => item["value"] == val.value)[0].url
+                    }
+                  />
+                </label>
               ))}
-              
-    
             </div>
           </div>
           <div className="alcohol">
@@ -343,9 +390,9 @@ function Filter() {
                   marks={alcoholMarks}
                   valueLabelDisplay="auto"
                 />
-    
+
                 {/* <label><img src={find_emoji} /></label> */}
-                
+
                 {/* {/* <option value="3" label="😣"></option> */}
                 {/* <option value="1" label="개가될거야!!!"></option> */}
               </Box>
@@ -372,7 +419,7 @@ function Filter() {
           </div>
 
           <button onClick={searchOnClick} id={mainStyles.filterBtn}>
-           검색
+            검색
           </button>
         </div>
 
