@@ -26,38 +26,38 @@ function Filter() {
 
   console.log(emoji);
 
-  // const booziness1 = emoji.filter((item) =>
-  //   item["value"].includes("booziness1")
-  // )[0].url;
-  // const booziness3 = emoji.filter((item) =>
-  //   item["value"].includes("booziness3")
-  // )[0].url;
-  // const booziness5 = emoji.filter((item) =>
-  //   item["value"].includes("booziness5")
-  // )[0].url;
+  const booziness1 = emoji.filter((item) =>
+    item["value"].includes("booziness1")
+  )[0].url;
+  const booziness3 = emoji.filter((item) =>
+    item["value"].includes("booziness3")
+  )[0].url;
+  const booziness5 = emoji.filter((item) =>
+    item["value"].includes("booziness5")
+  )[0].url;
 
-  // const sweetness1 = emoji.filter((item) =>
-  //   item["value"].includes("sweetness1")
-  // )[0].url;
-  // const sweetness3 = emoji.filter((item) =>
-  //   item["name"].includes("Wine Glass")
-  // )[0].url;
-  // const sweetness5 = emoji.filter((item) =>
-  //   item["value"].includes("sweetness5")
-  // )[0].url;
+  const sweetness1 = emoji.filter((item) =>
+    item["value"].includes("sweetness1")
+  )[0].url;
+  const sweetness3 = emoji.filter((item) =>
+    item["name"].includes("Wine Glass")
+  )[0].url;
+  const sweetness5 = emoji.filter((item) =>
+    item["value"].includes("sweetness5")
+  )[0].url;
 
-  const booziness1 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-  const booziness3 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-  const booziness5 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-  const sweetness1 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-  const sweetness3 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-  const sweetness5 =
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const booziness1 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const booziness3 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const booziness5 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const sweetness1 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const sweetness3 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const sweetness5 =
+//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
 
   const tastingNoteList = [
     {
