@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const getEmojiReducer = createSlice({
   name: "getEmoji",
-  initialState: [],
+  initialState: [undefined],
   reducers: {
     getEmoji: (state, action) => {
       return (state = action.payload );
