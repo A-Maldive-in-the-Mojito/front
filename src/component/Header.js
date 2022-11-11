@@ -22,8 +22,18 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
     //리덕스 스토어에 이모지 가져오기
     const reduxState = useSelector((state) => state);
     const emoji = reduxState.emoji;
-    const emoji_url = emoji.filter((item)=> item["name"].includes("Desert Island"))[0]?.url
     
+    // emoji 들어오면 재렌더링
+    let [full, setFull] = useState(0);
+
+    function isIN() {
+      if(emoji.length>1){
+        setFull(1)
+      } 
+    }
+    useEffect(() =>  isIN(), [emoji]);
+
+    const emoji_url = full == 1 ? emoji.filter((item)=> item["name"].includes("Desert Island"))[0].url : "";
 
     //카카오 로그인 허가 토큰 가져오는 코드
     const ValToken = window.Kakao.Auth.getAccessToken();
