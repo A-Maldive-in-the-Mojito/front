@@ -25,39 +25,37 @@ function Filter() {
   const emoji = reduxState.emoji;
 
   console.log(emoji);
+  
+  let [full, setFull] = useState(0);
 
-  const booziness1 = emoji.filter((item) =>
-    item["value"].includes("booziness1")
-  )[0].url;
-  const booziness3 = emoji.filter((item) =>
-    item["value"].includes("booziness3")
-  )[0].url;
-  const booziness5 = emoji.filter((item) =>
-    item["value"].includes("booziness5")
-  )[0].url;
 
-  const sweetness1 = emoji.filter((item) =>
-    item["value"].includes("sweetness1")
-  )[0].url;
-  const sweetness3 = emoji.filter((item) =>
-    item["name"].includes("Wine Glass")
-  )[0].url;
-  const sweetness5 = emoji.filter((item) =>
-    item["value"].includes("sweetness5")
-  )[0].url;
+  function isIN() {
+    if(emoji.length>1){
+      setFull(1)
+    } 
+  }
+  useEffect(() =>  isIN(), [emoji]);
 
-//   const booziness1 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-//   const booziness3 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-//   const booziness5 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-//   const sweetness1 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-//   const sweetness3 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
-//   const sweetness5 =
-//     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png";
+//   const booziness1 = emoji.filter((item) =>
+//     item["value"].includes("booziness1")
+//   )[0].url;
+//   const booziness3 = emoji.filter((item) =>
+//     item["value"].includes("booziness3")
+//   )[0].url;
+//   const booziness5 = emoji.filter((item) =>
+//     item["value"].includes("booziness5")
+//   )[0].url;
+
+//   const sweetness1 = emoji.filter((item) =>
+//     item["value"].includes("sweetness1")
+//   )[0].url;
+//   const sweetness3 = emoji.filter((item) =>
+//     item["name"].includes("Wine Glass")
+//   )[0].url;
+//   const sweetness5 = emoji.filter((item) =>
+//     item["value"].includes("sweetness5")
+//   )[0].url;
+
 
   const tastingNoteList = [
     {
@@ -112,66 +110,30 @@ function Filter() {
   const alcoholMarks = [
     {
       value: 1,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={booziness1} />{" "}
-          <p>
-            사람구실은 <p>해야지</p>
-          </p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("booziness1"))[0].url : ""} /> <p>사람구실은 <p>해야지</p></p></div>),
     },
     {
       value: 3,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={booziness3} />{" "}
-          <p>
-            오스트랄로피테쿠스 <p>입니다</p>
-          </p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("booziness3"))[0].url : ""} /> <p>오스트랄로피테쿠스 <p>입니다</p></p></div>),
     },
     {
       value: 5,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={booziness5} /> <p>멍멍</p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("booziness5"))[0].url : ""} /> <p>멍멍</p></div>),
     },
   ];
 
   const dryMarks = [
     {
       value: 1,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={sweetness1} />{" "}
-          <p>
-            달달함에 잠겨 <p>죽고싶다</p>
-          </p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("sweetness1"))[0].url : ""} /> <p>달달함에 잠겨 <p>죽고싶다</p></p></div>),
     },
     {
       value: 3,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={sweetness3} /> <p>달콤쌉싸름</p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("brandy"))[0].url : ""} /> <p>달콤쌉싸름</p></div>),
     },
     {
       value: 5,
-      label: (
-        <div className={mainStyles.slider_label}>
-          <img src={sweetness5} />{" "}
-          <p>
-            인생보다<p>쓴맛으로</p>
-          </p>
-        </div>
-      ),
+      label: (<div className={mainStyles.slider_label}><img src={full == 1 ? emoji.filter((item) => item["value"].includes("sweetness5"))[0].url : ""} /> <p>인생보다<p>쓴맛으로</p></p></div>),
     },
   ];
 
@@ -361,10 +323,7 @@ function Filter() {
                   <span className={mainStyles.text}>{val.name}</span>
                   <img
                     className={mainStyles.emoji}
-                    src={
-                      // emoji.filter((item) => item["value"] == val.value)[0].url
-                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png"
-                    }
+                    src={full == 1 ?emoji.filter((item)=> item["value"] == val.value)[0].url : "" }
                   />
                 </label>
               ))}
@@ -385,10 +344,7 @@ function Filter() {
                   <span className={mainStyles.text}>{val.name}</span>
                   <img
                     className={mainStyles.emoji}
-                    src={
-                      // emoji.filter((item) => item["value"] == val.value)[0].url
-                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png"
-                    }
+                    src={full == 1 ? emoji.filter((item)=> item["value"] == val.value)[0].url : ""}
                   />
                 </label>
               ))}
