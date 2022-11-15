@@ -90,6 +90,7 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
                         const profile_img = kakao_account.profile.profile_image_url
                         
                         //확인용 console log 
+                        console.log(kakao_account);
                         console.log(email);
                         console.log(nickname);
                         console.log(profile_img);
