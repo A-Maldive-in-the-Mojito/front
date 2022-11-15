@@ -95,7 +95,7 @@ function Top100() {
             reallOnlyArray.map((item) => (
               <SwiperSlide key={item.name} className={mainStyles.slide}>
                 <Link to={`/desc:${item._id.$oid}`}>
-                  <img src={item.S3_img} />
+                  <img src={item.img} />
                 </Link>
               </SwiperSlide>
             ))
