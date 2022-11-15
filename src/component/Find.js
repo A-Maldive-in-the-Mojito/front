@@ -222,7 +222,7 @@ function Find() {
                     (<Card
                         key={cocktail._id.$oid}
                         id={cocktail._id.$oid}
-                        img={cocktail.S3_img}
+                        img={cocktail.img}
                         name={cocktail.name}
                     />
                     ))
