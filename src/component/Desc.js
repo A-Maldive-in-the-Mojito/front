@@ -271,7 +271,7 @@ function Desc() {
   const noInfoEmoji = emoji.filter(item => item['value'].includes("no info"))[0].url
   // 베이스array 비교
   const baseName = baseArray.map(val => val.value == base[0] ? val.name : null)
-  const baseImg = emoji.filter(item => item['value'].includes(base[0]))[0].url
+  let baseImg = base.length < 1 ? noInfoEmoji : emoji.filter(item => item['value'].includes(base[0]))[0].url;
 
   //flavorArray 비교
   const flavorName = flavorArray.map(val => val.value == flavor[0] ? val.name : null)
