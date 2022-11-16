@@ -162,9 +162,6 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
                         <Link to={`/find:${linkTop100}`}>칵테일 검색</Link>
                     </li>
                     <li>
-                        <Link to="/home">고향 칵테일</Link>
-                    </li>
-                    <li>
                         <Link to="/storage" onClick={loginfirst}>내 칵테일 창고</Link>
                     </li>
                     <li>
