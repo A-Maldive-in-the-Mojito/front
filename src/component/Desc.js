@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, connect } from 'react-redux';
 
 //contect
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { APIContext } from "../context/APIContext";
 
 import Box from "@mui/material/Box";
@@ -22,7 +22,8 @@ function Desc() {
   //리덕스 스토어에 이모지 가져오기
   const reduxState = useSelector((state) => state);
   const emoji = reduxState.emoji;
-
+  console.log(emoji);
+  
   //context API받기
   const API = useContext(APIContext);
 
@@ -271,11 +272,54 @@ function Desc() {
   const noInfoEmoji = emoji.filter(item => item['value'].includes("no info"))[0].url
   // 베이스array 비교
   const baseName = baseArray.map(val => val.value == base[0] ? val.name : null)
-  let baseImg = base.length < 1 ? noInfoEmoji : emoji.filter(item => item['value'].includes(base[0]))[0].url;
+  const baseImg = base.length >= 1 ? (emoji.filter(item => item['value'].includes(base[0]))[0].url ) : null;
 
   //flavorArray 비교
   const flavorName = flavorArray.map(val => val.value == flavor[0] ? val.name : null)
   const flavorImg = emoji.filter(item => item['value'].includes(flavor[0]))[0].url
+
+
+  //레시피버튼 클릭
+  const [click, setClick] = useState(false);
+
+  const clickRecipe = () => {
+    setClick(!click)
+  }
+
+  
+  // 가로길이 리사이즈
+  // 길이가 바뀔때마다 리렌더링을 위해 useState 사용
+  const [Width, setWidth] = useState();
+
+  const handleResize = () =>{
+    setWidth(window.innerWidth-500)
+  }
+  
+  // 윈도우 창의 사이즈 변경될 때마다 이벤트 발생
+  useEffect(()=> {
+    window.addEventListener("resize", handleResize);
+  },[])
+  console.log(Width);
+
+
+  
+
+
+  const text_box_width = document.body.clientWidth -500
+  
+  
+  // 클릭 안한 경우 가장 위로 스크롤/ 클릭 한 경우 스크롤 다운
+  if(click == false){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    })
+    }else{
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+    })
+    }
 
   return (
     <div id="desc" className={styles.container}>
@@ -286,7 +330,7 @@ function Desc() {
         <span></span>
       </div>
       {/* 레시피 */}
-      <div className={styles.text_box}>
+      <div className={styles.text_box} style={{width: text_box_width }}>
 
 
         {/* 알콜 당도 정보 */}
@@ -371,7 +415,7 @@ function Desc() {
 
           {/* 재료 */}
           <div className={styles.recipe}>
-            <div className={styles.recipe_title}>Recipe</div>
+            <div className={styles.recipe_title} onClick={clickRecipe}>Recipe</div>
             <ul className={styles.ingredients}>
               {ingredients.map((item) => (
                 <li>
