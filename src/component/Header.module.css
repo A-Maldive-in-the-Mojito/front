@@ -23,7 +23,6 @@ a {
     color:  #121212;
     /* 줄바꿈 없애기 */
     white-space: nowrap;
-    padding-top: 10px;
   }
 
   .emoji {
@@ -47,7 +46,7 @@ a {
     justify-self: center;
     /* 줄바꿈 없애기 */
     white-space: nowrap;
-    padding: 10px 0px 0px 15px;
+    padding: 20px 0px 0px 15px;
   }
   .mystorage{
    justify-self: start;
