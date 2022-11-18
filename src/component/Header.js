@@ -161,7 +161,7 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
                     <li>
                         <Link to={`/find:${linkTop100}`}>칵테일 검색</Link>
                     </li>
-                    <li>
+                    <li className={styles.mystorage}>
                         <Link to="/storage" onClick={loginfirst}>내 칵테일 창고</Link>
                     </li>
                     <li>
