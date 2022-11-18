@@ -9,9 +9,9 @@ a {
    background: #ffffff;
    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
    border-bottom: 2px solid #FFE9CF;
-   margin: auto;  
+   position: fixed;  
    top: 0;
-   width: 70vw;
+   width: 100vw;
    z-index: 2;
  }
   
@@ -23,6 +23,7 @@ a {
     color:  #121212;
     /* 줄바꿈 없애기 */
     white-space: nowrap;
+    padding-top: 10px;
   }
 
   .emoji {
@@ -35,7 +36,7 @@ a {
   ul {
     display: grid;
     grid-column-start: 4;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 270px 1.5fr 5fr 1.5fr ;
     align-items: center;
   }
   li {
@@ -46,7 +47,10 @@ a {
     justify-self: center;
     /* 줄바꿈 없애기 */
     white-space: nowrap;
-    padding: 15px 15px 0px 15px;
+    padding: 10px 0px 0px 15px;
+  }
+  .mystorage{
+   justify-self: start;
   }
   .login {
     width: 100px;
@@ -66,7 +70,7 @@ a {
     justify-self: end;
     margin-right: 50px;
   }
-  
+
   .scroll {
     /* 위치지정 필요 */
     position: fixed;
