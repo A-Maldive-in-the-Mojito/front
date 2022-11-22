@@ -453,6 +453,7 @@ function Filter() {
             ))
           )}
         </div>
+      <div ref={ref} className={mainStyles.view}>Element {inView.toString()}</div>
       </div>
     </div>
   );
