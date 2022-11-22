@@ -54,12 +54,12 @@ function Top100() {
   //랜덤함수 실행
   Random();
 
-  let [slide, setSlide] = useState(mainStyles.slide);
-  function changeSlideClass() {
-    setSlide(mainStyles.active);
-  }
-
   const linkTop100 = 1;
+  
+  //버튼 클릭시 스크롤 맨 위로 향하게 하는 함수(onClick 안에 들어감)
+  function scrollTOP(){
+      window.scrollTo(0,0)
+  }
 
   return (
     <div className={mainStyles.Top100}>
@@ -105,7 +105,7 @@ function Top100() {
         </div>
       </Swiper>
 
-      <Link to={`/find:${linkTop100}`}>
+      <Link to={`/find:${linkTop100}`} onClick={scrollTOP}>
         <div className={mainStyles.more}>
           <span>+ Top 100 Cocktails 더보기</span>
         </div>
