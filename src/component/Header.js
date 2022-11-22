@@ -142,10 +142,15 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
         
         //로그아웃 상태일 시 내 칵테일 창고 접속 막기 - Link 태그 안에 onClick 함수.
         function loginfirst(event) {
+            window.scrollTo(0,0);
             if(ValToken == null){
                 event.preventDefault();
                 alert("로그인 먼저 해주세요😝");
             }
+        }
+        //버튼 클릭시 스크롤 맨 위로 향하게 하는 함수(onClick 안에 들어감)
+        function scrollTOP(){
+            window.scrollTo(0,0)
         }
         const linkTop100 = 0;
     return (
@@ -154,12 +159,12 @@ function Header({ dispatchGetEmail, dispatchGetStore, dispatchRemoveEmail, dispa
                 <ul>
                     <li>
                         <h1 className={styles.logo}>
-                            <Link to="/">
+                            <Link to="/" onClick={scrollTOP}>
                                 <img className={styles.emoji} src={emoji_url} />
                                 모히또에서 몰디브 한 잔</Link></h1>
                     </li>
                     <li>
-                        <Link to={`/find:${linkTop100}`}>칵테일 검색</Link>
+                        <Link to={`/find:${linkTop100}`} onClick={scrollTOP}>칵테일 검색</Link>
                     </li>
                     <li className={styles.mystorage}>
                         <Link to="/storage" onClick={loginfirst}>내 칵테일 창고</Link>
