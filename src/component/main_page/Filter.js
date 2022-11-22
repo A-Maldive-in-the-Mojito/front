@@ -8,242 +8,106 @@ import { Form } from "react-bootstrap";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
-import { useSelector, useDispatch } from "react-redux";
 
-import { useContext, useEffect, useState, useRef ,useMemo } from "react";
-import { APIContext, EmojiContext } from "../../context/APIContext";
+import { styled } from "@mui/material/styles";
+import { useSelector } from "react-redux";
+
+import { useContext, useEffect, useState, useRef } from "react";
+import { APIContext } from "../../context/APIContext";
 import { event } from "jquery";
 
 import { useInView } from "react-intersection-observer"
 
-// import {loadEmojis} from "../../redux/getEmoji";
-
-
 function Filter() {
   //  const cocktail_api = useSelector((state) => state)
   const API = useContext(APIContext);
-  const emoji = useContext(EmojiContext);
-  // console.log(API)
-  // console.log(emoji);
-
 
   //리덕스 스토어에 이모지 가져오기
-  // let [리스트, set리스트] = useState(0);
+  const reduxState = useSelector((state) => state);
+  const emoji = reduxState.emoji;
 
-  // const 쌩리스트 = [
-  //   {
-  //     "value" : "booziness1"
-  //   },
-  //   {
-  //     "value" : "booziness3"
-  //   },
-  //   {
-  //     "value" : "booziness5"
-  //   },
-  //   {
-  //     "value" : "sweetness1"
-  //   },
-  //   {
-  //     "value" : "brandy"
-  //   },
-  //   {
-  //     "value" : "sweetness5"
-  //   }
-  // ]
-  // console.log(emoji.filter(item => item.value == ))
-
-  // const 뉴리스트 = 쌩리스트.map(value=> emoji.find(item => item.value == value.value));
+  console.log(emoji);
   
-
-  // if(뉴리스트[0] != undefined){
-  //   const url리스트 = 뉴리스트.map(item => item.url)
-  //   console.log(url리스트)
-  //   set리스트(url리스트)
-  // }
-  
-  // console.log(리스트)
-
- 
   let [full, setFull] = useState(0);
 
-  //emoji에 데이터가 들어오면 리렌더링
+
   function isIN() {
     if(emoji.length>1){
       setFull(1)
     } 
   }
-  //emoji값이 변하면 실행
   useEffect(() =>  isIN(), [emoji]);
-  // console.log(full);
-  
-  // thunck
-  // const dispatch = useDispatch();
-  
-  //리덕스 스토어에 이모지 가져오기
-    // const reduxState = useSelector((state) => state.getEmoji);
-    // const reduxState = useSelector((state) => state);
-    // const emoji = reduxState.emoji;
-    // console.log(emoji);
-    // setTimeout(()=> stTimeGetEmoji(), 10000)
 
-    // useEffect(()=> {
-    //   setTimeout(()=> stTimeGetEmoji(), 1000);
-    // },[reduxState])
- 
-    // const 이모지callback = callback.callback.callback;
+//   const booziness1 = emoji.filter((item) =>
+//     item["value"].includes("booziness1")
+//   )[0].url;
+//   const booziness3 = emoji.filter((item) =>
+//     item["value"].includes("booziness3")
+//   )[0].url;
+//   const booziness5 = emoji.filter((item) =>
+//     item["value"].includes("booziness5")
+//   )[0].url;
 
-    // console.log(이모지callback);
-    // console.log(이모지callback[0]);
-    // console.log(이모지callback.filter((item) => item));
-
-
-
-    // thunck
-    // useEffect(() => {
-    //   dispatch(loadEmojis());
-    //   console.log(reduxState);
-    //   }, [reduxState]);
-
-  // let [emoji, setEmoji] = useState([]);
-
-  // const useAsyncTest = async () => {
-  //   const reduxState = useSelector((state) => state);
-  //   const emoji = reduxState.emoji;
-  //   console.log(emoji)
-  // }
-
-  // let [이모지,set이모지] = useState([]);
-  // // let 이모지list = [];
-  // let booziness1 = useRef([]);
-  // let booziness3 = useRef([]);
-
-  // const stTimeGetEmoji = () => {
-    
-  //   // console.log(emoji.filter((item) => item["value"].includes("booziness1"))[0].url);
-    // const booziness1 = emoji.filter((item) => item["value"].includes("booziness1"))[0].url
-    
-    // useRef에 저장
-    // booziness1.current = emoji.filter((item) => item["value"].includes("booziness1"))[0].url
-    // booziness3.current = emoji.filter((item) => item["value"].includes("booziness3"))[0].url
-
-    // console.log(booziness3.current)
-  //   set이모지(booziness1);
-    // const booziness3 = emoji.filter((item) => item["value"].includes("booziness3"))[0].url
-    // const booziness5 = emoji.filter((item) => item["value"].includes("booziness5"))[0].url
-
-    // const booziness3 = emoji.filter((item) => item["value"].includes("booziness3"))
-    
-    // const booziness3 = useRef([]);
-    // const [boozi, setBoozi] = useState(0);
-    // const boozi3 = emoji.find(item => item["value"] = "booziness3")
-    // // setBoozi(emoji.find(item => item["value"] = "booziness3"))
-    // console.log(boozi3);
-    
-    // setTimeout(() => {
-    //   booziness3.current = boozi3.url
-    //   setBoozi(1);
-    //   // console.log(booziness3.current);
-    // }, 1000);
-
-    
-    // console.log(booziness3.current);
-    // const urlOnClick = () => {
-    //   // setBoozi(1)
-    //   console.log(booziness3.current.url);
-    // }
-    
-    // console.log(booziness3)
-    
-    // const [실험, set실험] = useState(0);
-    // useEffect(()=> {
-    //   set실험(1)
-    // },[boozi])
-    // console.log(실험);
-
-    
-
-
-    // let newEmoji = 
-    // const sweetness1 = emoji.filter((item) => item["value"].includes("sweetness1"))[0].url
-    // const sweetness3 = emoji.filter((item) => item["name"].includes("Wine Glass"))[0].url
-    // const sweetness5 = emoji.filter((item) => item["value"].includes("sweetness5"))[0].url
-
-  //   set이모지(...이모지, booziness1, booziness3, booziness5, sweetness1, sweetness3, sweetness5);
-  // }
-  // console.log(booziness3.current)
-
-//   useEffect(() => {
-//     이모지fn()
-//   }, []);
-//  console.log(이모지);
-
-
-
-  // let booziness1
-  // const AsyncTest = async () => {
-  //   console.log(emoji.filter((item) => item["value"].includes("booziness1"))[0].url)
-  //   booziness1 = await emoji.filter((item) => item["value"].includes("booziness1"))[0].url
-  // }
-  // useEffect(()=> {
-  //   AsyncTest()
-  // },[])
-  // console.log(emoji)
-  
-
-  // const booziness1 = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/lemon_1f34b.png"
+//   const sweetness1 = emoji.filter((item) =>
+//     item["value"].includes("sweetness1")
+//   )[0].url;
+//   const sweetness3 = emoji.filter((item) =>
+//     item["name"].includes("Wine Glass")
+//   )[0].url;
+//   const sweetness5 = emoji.filter((item) =>
+//     item["value"].includes("sweetness5")
+//   )[0].url;
 
 
   const tastingNoteList = [
     {
       name: "과일",
-      value: "프루티"
+      value: "프루티",
     },
     {
       name: "허브",
-      value: "허브"
+      value: "허브",
     },
     {
       name: "아이셔",
-      value: "아이셔"
+      value: "아이셔",
     },
     {
       name: "아이써",
-      value: "아이써"
+      value: "아이써",
     },
     {
       name: "프레시",
-      value: "프레시"
+      value: "프레시",
     },
-  ]
+  ];
 
   const baseList = [
     {
       name: "진",
-      value: "gin"
+      value: "gin",
     },
     {
       name: "럼",
-      value: "rum"
+      value: "rum",
     },
     {
       name: "위스키",
-      value: "whiskey"
+      value: "whiskey",
     },
     {
       name: "데킬라",
-      value: "tequila"
+      value: "tequila",
     },
     {
       name: "보드카",
-      value: "vodka"
+      value: "vodka",
     },
     {
       name: "브랜디",
-      value: "brandy"
+      value: "brandy",
     },
-  ]
-
+  ];
 
   const alcoholMarks = [
     {
@@ -279,8 +143,8 @@ function Filter() {
     color: "#ff9924",
     height: 6,
     //고정
-    '&.Mui-disabled': {
-      color: '#fe900f'
+    "&.Mui-disabled": {
+      color: "#fe900f",
     },
 
     // 단추
@@ -327,8 +191,8 @@ function Filter() {
     checked
       ? (tastingValue.current = [eventValue, ...tastingValue.current])
       : (tastingValue.current = tastingValue.current.filter(
-        (val) => val != eventValue
-      ));
+          (val) => val != eventValue
+        ));
   };
 
   // 베이스 값
@@ -339,12 +203,12 @@ function Filter() {
     baseChecked
       ? (baseValue.current = [eventValue, ...baseValue.current])
       : (baseValue.current = baseValue.current.filter(
-        (val) => val != eventValue
-      ));
+          (val) => val != eventValue
+        ));
   };
 
   // 얼마나 취할래 값
-  const [currentBoozy, setCurrentBoozy] = useState();//검색버튼클릭시 지정해둔 값으로 고정하기 위함.
+  const [currentBoozy, setCurrentBoozy] = useState(); //검색버튼클릭시 지정해둔 값으로 고정하기 위함.
   const boozyValue = useRef(10);
   const boozyOnChange = (event) => {
     const parseBoozyValue = parseInt(event.target.value);
@@ -353,12 +217,12 @@ function Filter() {
   };
 
   // sweet or dry 값
-  const [currentSweet, setCurrentSweet] = useState();//검색버튼클릭시 지정해둔 값으로 고정하기 위함.
+  const [currentSweet, setCurrentSweet] = useState(); //검색버튼클릭시 지정해둔 값으로 고정하기 위함.
   const sweetValue = useRef(6);
   const sweetOnchange = (event) => {
     const parseSweetValue = parseInt(event.target.value);
     sweetValue.current = parseSweetValue * 2;
-    setCurrentSweet(parseSweetValue)
+    setCurrentSweet(parseSweetValue);
   };
 
   const [클릭함, set클릭함] = useState(0);
@@ -367,7 +231,7 @@ function Filter() {
 
   const searchOnClick = (event) => {
     set클릭함(1);
-    console.log(event)
+    console.log(event);
     // console.log(tastingValue.current);
     // console.log(baseValue.current);
     // console.log(boozyValue.current);
@@ -419,7 +283,6 @@ function Filter() {
       (val) => val.booziness <= boozyValue.current
     );
     boozyArray.push(searchBoozy);
-    
 
     // sweet or dry
     const sweetArray = [];
@@ -427,27 +290,23 @@ function Filter() {
       (val) => val.sweetness <= sweetValue.current
     );
     sweetArray.push(searchSweet);
-   
 
     // 네 가지 항목 필터링
     const allFilter = concatTA
       .filter((val) => concatBA.includes(val))
       .filter((val) => boozyArray[0].includes(val))
       .filter((val) => sweetArray[0].includes(val));
-    
 
     // 중복제거
     const removeDuplicate = Array.from(new Set(allFilter));
     // console.log(removeDuplicate);
     setUseArray(removeDuplicate);
-
   };
-  
-  //무한 스크롤
+
+ //무한 스크롤
   const { ref, inView } = useInView();
   // ref가 화면에 나타나면 inView는 true, 아니면 false를 반환한다.
   console.log(inView)
-
 
   const [ sliceAPIArray , setSliceAPIArray ] = useState(API.slice(0,20));
 
@@ -469,14 +328,10 @@ function Filter() {
 
     }
 
-
-
     useEffect (()=> {
       moreAPI();
 
   },[inView]);
-
-
 
   return (
     <div className={mainStyles.filterSection}>
@@ -488,7 +343,6 @@ function Filter() {
           <div className={mainStyles.tastingNote}>
             <h3>테이스팅 노트</h3>
             <div id={mainStyles.checkBoxList}>
-
               {tastingNoteList.map((val) => (
                 <label>
                   <input
@@ -499,18 +353,18 @@ function Filter() {
                   />
                   <i className={mainStyles.circle}></i>
                   <span className={mainStyles.text}>{val.name}</span>
-
-                  <img className={mainStyles.emoji} src={full == 1 ?emoji.filter((item)=> item["value"] == val.value)[0].url : ""} />
-                  </label>
+                  <img
+                    className={mainStyles.emoji}
+                    src={full == 1 ?emoji.filter((item)=> item["value"] == val.value)[0].url : "" }
+                  />
+                </label>
               ))}
-
             </div>
           </div>
           <div className="base">
             <h3>베이스</h3>
             <div id={mainStyles.checkBoxList}>
-              
-            {baseList.map((val) => (
+              {baseList.map((val) => (
                 <label>
                   <input
                     onChange={baseOnChange}
@@ -520,11 +374,12 @@ function Filter() {
                   />
                   <i className={mainStyles.circle}></i>
                   <span className={mainStyles.text}>{val.name}</span>
-                  <img className={mainStyles.emoji} src={full == 1 ? emoji.filter((item)=> item["value"] == val.value)[0].url : ""} />
-                  </label>
+                  <img
+                    className={mainStyles.emoji}
+                    src={full == 1 ? emoji.filter((item)=> item["value"] == val.value)[0].url : ""}
+                  />
+                </label>
               ))}
-              
-    
             </div>
           </div>
           <div className="alcohol">
@@ -539,9 +394,9 @@ function Filter() {
                   marks={alcoholMarks}
                   valueLabelDisplay="auto"
                 />
-    
+
                 {/* <label><img src={find_emoji} /></label> */}
-                
+
                 {/* {/* <option value="3" label="😣"></option> */}
                 {/* <option value="1" label="개가될거야!!!"></option> */}
               </Box>
@@ -566,14 +421,10 @@ function Filter() {
               </Box>
             </div>
           </div>
-          {/* <button onClick={urlOnClick} id={mainStyles.urlBtn}>
-           url나와라
-          </button> */}
-          <button onClick={searchOnClick} id={mainStyles.filterBtn}>
-           검색
-          </button>
 
-         
+          <button onClick={searchOnClick} id={mainStyles.filterBtn}>
+            검색
+          </button>
         </div>
 
         {/* 결과 칵테일 카드 */}
@@ -602,7 +453,6 @@ function Filter() {
             ))
           )}
         </div>
-        <div ref={ref} className={mainStyles.view}>Element {inView.toString()}</div>
       </div>
     </div>
   );
