@@ -310,6 +310,9 @@ function Filter() {
 
   const [ sliceAPIArray , setSliceAPIArray ] = useState(API.slice(0,20));
   console.log(sliceAPIArray);
+  console.log(API.slice(0,20));
+  const twen = API.slice(0,20)
+  console.log(twen);
 
   //inView 값이 바뀔때만 실행
   let [i, setI] = useState(20);
