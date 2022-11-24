@@ -309,13 +309,12 @@ function Filter() {
   console.log(inView)
 
   const [ sliceAPIArray , setSliceAPIArray ] = useState(API.slice(0,20));
-
+  console.log(sliceAPIArray);
 
   //inView 값이 바뀔때만 실행
   let [i, setI] = useState(20);
 
   const moreAPI = () => {
-    console.log(inView);
 
       if (inView == true) {
         const sliceAPI = API.slice(0,i);
