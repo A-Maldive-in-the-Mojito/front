@@ -308,7 +308,7 @@ function Filter() {
   // ref가 화면에 나타나면 inView는 true, 아니면 false를 반환한다.
   console.log(inView)
 
-  const [ sliceAPIArray , setSliceAPIArray ] = useState(API.slice(0,20));
+  const [ sliceAPIArray , setSliceAPIArray ] = useState(twen);
   console.log(sliceAPIArray);
   console.log(API.slice(0,20));
   const twen = API.slice(0,20)
