@@ -312,7 +312,7 @@ function Filter() {
 
 
   //inView 값이 바뀔때만 실행
-  let [i, setI] = useState(40);
+  let [i, setI] = useState(20);
 
   const moreAPI = () => {
     console.log(inView);
