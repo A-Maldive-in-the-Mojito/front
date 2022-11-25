@@ -30,15 +30,14 @@ function Filter() {
   
   let [full, setFull] = useState(0);
 
-
+//API 값 들어오는 것에 따라 처음 보여줄 카드와 이모지 렌더링을 위한 함수
   function isIN() {
     if(emoji.length>1){
-      setFull(1)
+      setFull(1);
     } 
+    setSliceAPIArray(API.slice(0,20))
   }
-//   useEffect(() =>  isIN(), [emoji]);
-  
-   //API 가 다 들어왔을 때 emoji가 다 찼다는 useState 실행
+  //API 가 다 들어왔을 때 emoji가 다 찼다는 useState 실행
   useEffect(() =>  isIN(), [API]);
 
 //   const booziness1 = emoji.filter((item) =>
