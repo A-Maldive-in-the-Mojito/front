@@ -36,7 +36,10 @@ function Filter() {
       setFull(1)
     } 
   }
-  useEffect(() =>  isIN(), [emoji]);
+//   useEffect(() =>  isIN(), [emoji]);
+  
+   //API 가 다 들어왔을 때 emoji가 다 찼다는 useState 실행
+  useEffect(() =>  isIN(), [API]);
 
 //   const booziness1 = emoji.filter((item) =>
 //     item["value"].includes("booziness1")
