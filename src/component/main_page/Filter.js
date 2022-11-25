@@ -322,7 +322,7 @@ console.log(API);
 
   const moreAPI = () => {
 
-      if (inView == true) {
+      if (inView == true && i < 520) {
         const sliceAPI = API.slice(0,i);
 
         console.log(sliceAPI)
