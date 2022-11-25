@@ -318,7 +318,7 @@ console.log(API);
   console.log(sliceAPIArray);
   
   //inView 값이 바뀔때만 실행
-  let [i, setI] = useState(20);
+  let [i, setI] = useState(40);
 
   const moreAPI = () => {
 
