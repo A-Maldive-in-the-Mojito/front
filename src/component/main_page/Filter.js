@@ -14,7 +14,6 @@ import { useSelector } from "react-redux";
 
 import { useContext, useEffect, useState, useRef } from "react";
 import { APIContext } from "../../context/APIContext";
-import { event } from "jquery";
 
 import { useInView } from "react-intersection-observer"
 
@@ -25,8 +24,6 @@ function Filter() {
   //리덕스 스토어에 이모지 가져오기
   const reduxState = useSelector((state) => state);
   const emoji = reduxState.emoji;
-
-  console.log(emoji);
   
   let [full, setFull] = useState(0);
 
@@ -39,26 +36,6 @@ function Filter() {
   }
   //API 가 다 들어왔을 때 emoji가 다 찼다는 useState 실행
   useEffect(() =>  isIN(), [API]);
-
-//   const booziness1 = emoji.filter((item) =>
-//     item["value"].includes("booziness1")
-//   )[0].url;
-//   const booziness3 = emoji.filter((item) =>
-//     item["value"].includes("booziness3")
-//   )[0].url;
-//   const booziness5 = emoji.filter((item) =>
-//     item["value"].includes("booziness5")
-//   )[0].url;
-
-//   const sweetness1 = emoji.filter((item) =>
-//     item["value"].includes("sweetness1")
-//   )[0].url;
-//   const sweetness3 = emoji.filter((item) =>
-//     item["name"].includes("Wine Glass")
-//   )[0].url;
-//   const sweetness5 = emoji.filter((item) =>
-//     item["value"].includes("sweetness5")
-//   )[0].url;
 
 
   const tastingNoteList = [
@@ -400,10 +377,6 @@ console.log(API);
                   valueLabelDisplay="auto"
                 />
 
-                {/* <label><img src={find_emoji} /></label> */}
-
-                {/* {/* <option value="3" label="😣"></option> */}
-                {/* <option value="1" label="개가될거야!!!"></option> */}
               </Box>
             </div>
           </div>
