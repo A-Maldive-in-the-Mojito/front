@@ -425,7 +425,7 @@ console.log(API);
               <Card
                 key={cocktail._id.$oid}
                 id={cocktail._id.$oid}
-                img={cocktail.real_S3_imgimg}
+                img={cocktail.real_S3_img}
                 name={cocktail.name}
               />
             ))
