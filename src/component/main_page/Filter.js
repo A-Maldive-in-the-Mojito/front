@@ -4,7 +4,6 @@ import mainStyles from "./Main.module.css";
 import Card from "../Card.js";
 
 import { Link } from "react-router-dom";
-import { Form } from "react-bootstrap";
 
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
