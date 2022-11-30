@@ -31,7 +31,7 @@ function Desc() {
   // console.log(n, "DB에서의 순서");
 
   const name = API[n].name;
-  const img = API[n].img;
+  const img = API[n].real_S3_img;
   const base = API[n].base;
   const booziness = API[n].booziness;
   const sweetness = API[n].sweetness;
