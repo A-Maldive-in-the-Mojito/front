@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/proxy/*"
-  to = "https://mojitoto.herokuapp.com/:splat"
+  to = "https://maldives-in-mojito.herokuapp.com/:splat"
   status = 200
   force = true
 
