@@ -1,7 +1,6 @@
 # Maldives_In_Mojito
 <img src="public/로고.png" width="400">
-
-#
+<img width="400" alt="로고" src="https://user-images.githubusercontent.com/80323356/206391328-1a659fee-d68c-443f-a066-6f7e8e638342.png">
  
 ### 배포 서버 주소
 [사이트 주소💥](https://maldivesinmojito.netlify.app/)  
@@ -25,17 +24,20 @@
 
 ### 서비스 이미지 
 ###### 🍸 메인페이지의 필터섹션
-<img src="public/필터.png" width="500">  
+<img src="public/필터.png" width="500">
+<img width="500" alt="필터" src="https://user-images.githubusercontent.com/80323356/206390850-fc4b6835-b3b8-405e-9d90-20caaa95db3a.png">  
 
 ###### 🍸 칵테일 검색
 <img src="public/검색레몬.png" width="500">
+<img width="500" alt="검색레몬" src="https://user-images.githubusercontent.com/80323356/206391266-78b0b693-4eea-47cd-99d1-51bed94b48e0.png">
 
 ###### 🍸 즐겨찾기 (찜) 한 칵테일
 <img src="public/내칵테일창고.png" width="500">
+<img width="500" alt="내칵테일창고" src="https://user-images.githubusercontent.com/80323356/206391273-1797b15d-17b4-47b9-822f-ca5b8a0987b4.png">
 
 ###### 🍸 칵테일 상세 페이지
 <img src="public/상세페이지.png" width="500">
-
+<img width="500" alt="상세페이지" src="https://user-images.githubusercontent.com/80323356/206391281-1711d9cc-d860-4619-945a-a64e20be4b93.png">
 
 
 #
