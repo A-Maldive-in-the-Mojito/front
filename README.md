@@ -1,5 +1,4 @@
 # Maldives_In_Mojito
-<img src="public/로고.png" width="400">
 <img width="400" alt="로고" src="https://user-images.githubusercontent.com/80323356/206391328-1a659fee-d68c-443f-a066-6f7e8e638342.png">
  
 ### 배포 서버 주소
@@ -24,19 +23,15 @@
 
 ### 서비스 이미지 
 ###### 🍸 메인페이지의 필터섹션
-<img src="public/필터.png" width="500">
 <img width="500" alt="필터" src="https://user-images.githubusercontent.com/80323356/206390850-fc4b6835-b3b8-405e-9d90-20caaa95db3a.png">  
 
 ###### 🍸 칵테일 검색
-<img src="public/검색레몬.png" width="500">
 <img width="500" alt="검색레몬" src="https://user-images.githubusercontent.com/80323356/206391266-78b0b693-4eea-47cd-99d1-51bed94b48e0.png">
 
 ###### 🍸 즐겨찾기 (찜) 한 칵테일
-<img src="public/내칵테일창고.png" width="500">
 <img width="500" alt="내칵테일창고" src="https://user-images.githubusercontent.com/80323356/206391273-1797b15d-17b4-47b9-822f-ca5b8a0987b4.png">
 
 ###### 🍸 칵테일 상세 페이지
-<img src="public/상세페이지.png" width="500">
 <img width="500" alt="상세페이지" src="https://user-images.githubusercontent.com/80323356/206391281-1711d9cc-d860-4619-945a-a64e20be4b93.png">
 
 
@@ -56,7 +51,7 @@
 
 #### 🔥 백엔드
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> 
+<img vertical-align:middle src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> 
 <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"> 
 <img src="https://img.shields.io/badge/Selenium
 -43B02A?style=for-the-badge&logo=Selenium
@@ -169,3 +164,9 @@ C:.
   혹은 Next.js 를 통해 SSR+CSR 방식의 페이지 구현
    * 간단한 칵테일 제조 게임(unity) 구현.  
    => 선택한 재료 조합으로 만들 수 있는 칵테일 정보 제공
+#
+
+   ## 성장과정
+  노션 링크  
+  ###  [✨경호노션🍷](https://inexpensive-language-04b.notion.site/10b949565daa4bed898c5956c4d33e4c?v=6d48e81036bf479dbfaa3f70347821d4)
+  ###  [🌈수완노션🎄](https://www.notion.so/MOJITO-6811f20d3f814e57bada603e37577a47)
