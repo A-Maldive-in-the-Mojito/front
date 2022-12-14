@@ -165,6 +165,12 @@ function Find() {
     const selectOnChange = (event) => {
         setSelectValue(event.target.value);
     };
+    // 이모지 파일 확인
+    const [render, setRender] = useState("");
+    function INemoji() {
+        setRender(1);
+    }
+    useEffect(() => INemoji(), [emoji])
 
     return (
         <div className={Styles.Find}>
@@ -195,7 +201,7 @@ function Find() {
                             <span className={
                                 (val.value == "top100" ? `${Styles.TOP} ${Styles.hashtag}` : Styles.hashtag)
                                 }>{val.name}
-                                <img className={Styles.hash_emoji} src={emoji.filter((item) => item["value"].includes(val.value))[0].url} />
+                                <img className={Styles.hash_emoji} src={emoji.length<1 ? "" : emoji.filter((item) => item["value"].includes(val.value))[0].url} />
                             </span>
 
                         </label>
