@@ -14,7 +14,7 @@ const persistConfig = {
     key: 'root',
     storage: storage,
     // whitelist: ["email"],
-    blacklist: ["emoji"],
+//     blacklist: ["emoji"],
 };
 
 
